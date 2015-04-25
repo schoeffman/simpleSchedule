@@ -1,0 +1,26 @@
+  <form role="form"  ng-submit="addEvent()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="scheduleEventName" placeholder="Event Name" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+      </div>
+    </div>
+    <br />
+    <!-- Time Selectors-->
+    <div class="form-group">
+      <label>Start Time:
+      <timepicker ng-model="startTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+      </label>
+      <label>End Time:
+      <timepicker ng-model="endTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+      </label>
+
+      <label>Repeat:
+        <select ng-model="scheduleOption" ng-options="repeatOption.name for repeatOption in repeatOptions">
+          <option value="">-- repeat --</option>
+        </select>
+      </label>
+    <div>
+  </form>

@@ -1,0 +1,26 @@
+<table st-table="timeTable" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Time</th>
+		<th>Monday</th>
+		<th>Tuesday</th>
+		<th>Wednesday</th>
+		<th>Thursday</th>
+		<th>Friday</th>
+		<th>Saturday</th>
+		<th>Sunday</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in dataset">
+    <td>{{row.monday.time}}</td>
+    <td class="{{row.monday.booked}}"></td>
+    <td class="{{row.tuesday.booked}}"></td>
+    <td class="{{row.wednesday.booked}}"></td>
+    <td class="{{row.thursday.booked}}"></td>
+    <td class="{{row.friday.booked}}"></td>
+    <td class="{{row.saturday.booked}}"></td>
+    <td class="{{row.sunday.booked}}"></td>
+	</tr>
+	</tbody>
+</table> 

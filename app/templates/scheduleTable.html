@@ -1,0 +1,19 @@
+    <!-- schedule list -->
+<table st-table="rowCollection" class="table table-striped" >
+	<thead>
+	<tr>
+		<th>Start Time</th>
+		<th>End Time</th>
+		<th>Event Name</th>
+		<th>Repeat</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in rowCollection">
+		<td>{{row.startTime.getHours();}}</td>
+		<td>{{row.endTime.getHours();}}</td>
+		<td>{{row.eventName}}</td>
+		<td>{{row.repeat.name}}</td>
+	</tr>
+	</tbody>
+</table> 
