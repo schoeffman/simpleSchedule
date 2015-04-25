@@ -8,6 +8,20 @@ version 0.11.1.
 (using angular 1.3.15)
 `npm install`
 `bower install`
-Run `grunt` for building and `grunt serve` for preview.
+`grunt serve` for preview.
+
+## Vagrant Edition
+```
+clone repo
+checkout vagrant branch
+install vagrant dependencis (https://www.vagrantup.com/downloads.html)
+vagrant up (takes a while)
+vagrant ssh
+cd /vagrant
+npm install
+bower install (answer 2)
+grunt serve
+```
+Then go to [http://localhost:9000](http://localhost:9000)
 
 
