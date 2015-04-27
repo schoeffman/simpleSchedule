@@ -1,24 +1,25 @@
-  <form role="form"  ng-submit="addEvent()">
+  <form name="calendarform" role="form"  ng-submit="addEvent()">
     <div class="row">
       <div class="input-group">
-        <input type="text" ng-model="scheduleEventName" placeholder="Event Name" class="form-control">
+        <input type="text" required ng-model="calendarinput.name" placeholder="Event Name" class="form-control"></input>
         <span class="input-group-btn">
-          <input type="submit" class="btn btn-primary" value="Add">
+          <input type="submit" class="btn btn-primary" value="Add"></input>
         </span>
       </div>
     </div>
     <br />
     <!-- Time Selectors-->
-    <div class="form-group">
+    <div class="row">
       <label>Start Time:
-      <timepicker ng-model="startTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+        <timepicker test-expression="$modal > endTime" ng-model="startTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
       </label>
       <label>End Time:
       <timepicker ng-model="endTime" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
       </label>
 
+    <!-- Repeat Dropdown -->
       <label>Repeat:
-        <select ng-model="scheduleOption" ng-options="repeatOption.name for repeatOption in repeatOptions">
+        <select ng-model="calendarinput.scheduleOption" ng-options="repeatOption.name for repeatOption in calendar.repeatOptions">
           <option value="">-- repeat --</option>
         </select>
       </label>

@@ -6,14 +6,16 @@
 		<th>End Time</th>
 		<th>Event Name</th>
 		<th>Repeat</th>
+		<th></th>
 	</tr>
 	</thead>
 	<tbody>
-	<tr ng-repeat="row in rowCollection">
+	<tr ng-repeat="row in calendar.rowCollection">
 		<td>{{row.startTime.getHours();}}</td>
 		<td>{{row.endTime.getHours();}}</td>
 		<td>{{row.eventName}}</td>
-		<td>{{row.repeat.name}}</td>
+		<td>{{row.repeat.name}}</td>  
+    <td><button class="btn btn-danger" ng-click="removeEvent($index)" aria-label="Remove">X</button></td>
 	</tr>
 	</tbody>
 </table> 
