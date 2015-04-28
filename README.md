@@ -13,7 +13,7 @@ version 0.11.1.
 ## Vagrant Edition
 ```
 clone repo
-checkout vagrant branch
+Install virtual box (https://www.virtualbox.org/wiki/Downloads)
 install vagrant dependencis (https://www.vagrantup.com/downloads.html)
 vagrant up (takes a while)
 vagrant ssh
